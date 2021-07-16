@@ -20,8 +20,8 @@ class twitch_channel:
 
 	def get_channel_id(self):
 		headers={
-	        'Client-ID': self.user.client_id,
-	        'Authorization':'Bearer '+self.user.key['access_token']
+	    	'Client-ID': self.user.client_id,
+	    	'Authorization':'Bearer '+self.user.key['access_token']
 		}
 		query={
 		    'login':self.name
@@ -36,8 +36,8 @@ class twitch_channel:
 
 	def get_vod_by_datelist(self,datelist):
 		headers={
-	        'Client-ID': self.user.client_id,
-	        'Authorization':'Bearer '+self.user.key['access_token']
+	    	'Client-ID': self.user.client_id,
+	    	'Authorization':'Bearer '+self.user.key['access_token']
 		}
 		query={
 			'user_id':self.id,
