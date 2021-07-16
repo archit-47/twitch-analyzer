@@ -10,7 +10,7 @@ Clone this github repo and create a new file config.py
 
 Add the following lines to this file :
 
-```
+```python
 import requests
 
 client_id='<your_client_id>'
@@ -25,5 +25,5 @@ def get_key():
 	r=requests.post('https://id.twitch.tv/oauth2/token', body)
 	keys=r.json()
 	return keys
-	
+
 ```
