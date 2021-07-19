@@ -1,12 +1,18 @@
 # Data analysis using Twitch API
 
-Works on Python3 [Link](https://www.python.org/downloads/)
+Works on [Python3](https://www.python.org/downloads/)
+
+I Recommend creating a virtual environment before the following steps. [Read more here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+
+After you have created a virtual environment and activated it, proceed with the following steps.
+
+Clone this repository 
 
 Install requirements with ``pip install requirements.txt``
 
-Go to [Link](https://twitchapps.com/tmi/) to request an auth token for your twitch account. 
+Go to [this link](https://twitchapps.com/tmi/) to request an auth token for your twitch account. 
 
-Clone this github repo and create a new file config.py
+Create a new file config.py
 
 Add the following lines to this file :
 
@@ -27,3 +33,11 @@ def get_key():
 	return keys
 
 ```
+
+Modify plots.py with the name of the twitch channel you want statistics for, subsequently specify the dates as you wish.
+
+Run the python file plots.py
+
+(Getting logs can take time depending on the activity on a channel. Be patient)
+
+Note : [tcd](https://github.com/PetterKraabol/Twitch-Chat-Downloader) will ask for your client id and client secret when running for the first time.

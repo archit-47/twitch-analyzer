@@ -75,21 +75,14 @@ class twitch_channel:
 		except OSError as error:
 			print(error)
 		os.chdir(os.getcwd()+'\\logs')
-		os.system("tcd -v" +','.join(self.vod_id_list))
+		for log in self.vod_id_list:
+			if(log+".txt" not in os.listdir()):
+				os.system("tcd -v"+log)
 
 		for day in self.voddict_by_date.keys():
-			self.voddict_by_date[day]['messsage_count']=0
+			self.voddict_by_date[day]['message_count']=0
 			for vod_id in self.voddict_by_date[day]['id']:
 				file=open(os.getcwd()+"\\"+vod_id+".txt","r",encoding='utf-8')
-				self.voddict_by_date[day]['messsage_count']+=len([line.strip('\n') for line in file if line != '\n'])
+				self.voddict_by_date[day]['message_count']+=len([line.strip('\n') for line in file if line != '\n'])
 				file.close()
 
-streamer = twitch_channel('fl0m');
-print(streamer.name)
-print(streamer.id)
-streamer.get_vod_by_datelist(['2021-07-12','2021-07-13','2021-07-14','2021-07-15','2021-07-16','2021-07-17','2021-07-18',])
-streamer.get_datelist_data()
-print(streamer.vod_id_list)
-
-streamer.get_vod_logs()
-print(streamer.voddict_by_date)
