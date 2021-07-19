@@ -6,15 +6,15 @@ I Recommend creating a virtual environment before the following steps. [Read mor
 
 After you have created a virtual environment and activated it, proceed with the following steps.
 
-Clone this repository 
+1. Clone this repository 
 
-Install requirements with ``pip install requirements.txt``
+2. Install requirements with ``pip install requirements.txt``
 
-Go to [this link](https://twitchapps.com/tmi/) to request an auth token for your twitch account. 
+3. Go to [this link](https://twitchapps.com/tmi/) to request an auth token for your twitch account. 
 
-Create a new file config.py
+4. Create a new file config.py
 
-Add the following lines to this file :
+5. Add the following lines to this file :
 
 ```python
 import requests
@@ -34,9 +34,9 @@ def get_key():
 
 ```
 
-Modify plots.py with the name of the twitch channel you want statistics for, subsequently specify the dates as you wish.
+6. Modify plots.py with the name of the twitch channel you want statistics for, subsequently specify the dates as you wish.
 
-Run the python file plots.py
+7. Run the python file plots.py
 
 (Getting logs can take time depending on the activity on a channel. Be patient)
 
