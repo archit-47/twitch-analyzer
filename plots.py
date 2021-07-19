@@ -11,7 +11,7 @@ print(streamer.name)
 print(streamer.id)
 streamer.get_vod_by_datelist(['2021-07-12','2021-07-13','2021-07-14','2021-07-15','2021-07-16','2021-07-17','2021-07-18']) #modify these dates ('yyyy-mm-dd')
 streamer.get_datelist_data()
-print("IDs of requested vods :"streamer.vod_id_list)
+print("IDs of requested vods :"+",".join(streamer.vod_id_list))
 
 streamer.get_vod_logs()
 print("Raw Data : ")
