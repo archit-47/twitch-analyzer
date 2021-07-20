@@ -34,9 +34,9 @@ def get_key():
 
 ```
 
-6. Modify plots.py with the name of the twitch channel you want statistics for, subsequently specify the dates as you wish.
+6. Modify plots.py/chat_analytics.py with the name of the twitch channel you want statistics for, subsequently specify the dates as you wish.
 
-7. Run the python file plots.py
+7. Run the python file plots.py/chat_analytics.py
 
 (Getting logs can take time depending on the activity on a channel. Be patient)
 
