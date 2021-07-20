@@ -74,15 +74,16 @@ class twitch_channel:
 			os.makedirs(os.getcwd()+'\\logs')
 		except OSError as error:
 			print(error)
+			print("\n\n")
 		os.chdir(os.getcwd()+'\\logs')
 		for log in self.vod_id_list:
 			if(log+".txt" not in os.listdir()):
 				os.system("tcd -v"+log)
-
 		for day in self.voddict_by_date.keys():
 			self.voddict_by_date[day]['message_count']=0
 			for vod_id in self.voddict_by_date[day]['id']:
 				file=open(os.getcwd()+"\\"+vod_id+".txt","r",encoding='utf-8')
 				self.voddict_by_date[day]['message_count']+=len([line.strip('\n') for line in file if line != '\n'])
 				file.close()
+		os.chdir('..')		
 

@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 
 import Twitch_data as ttv
 
-streamer = ttv.twitch_channel('pokimane'); #channel name here
+streamer = ttv.twitch_channel('fl0m'); #channel name here
 print(streamer.name)
 print(streamer.id)
-streamer.get_vod_by_datelist(['2021-07-12','2021-07-13','2021-07-14','2021-07-15','2021-07-16','2021-07-17','2021-07-18']) #modify these dates ('yyyy-mm-dd')
+streamer.get_vod_by_datelist(['2021-07-19','2021-07-20','2021-07-21','2021-07-22','2021-07-23','2021-07-24','2021-07-25']) #modify these dates ('yyyy-mm-dd')
 streamer.get_datelist_data()
 print("IDs of requested vods :"+",".join(streamer.vod_id_list))
 
