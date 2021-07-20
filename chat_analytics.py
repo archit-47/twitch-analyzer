@@ -4,7 +4,7 @@ import pandas as pd
 
 import Twitch_data as ttv
 
-streamer = ttv.twitch_channel('QuarterJade') #channel name here
+streamer = ttv.twitch_channel('fl0m') #channel name here
 print(streamer.name)
 print(streamer.id)
 streamer.get_vod_by_datelist(['2021-07-12','2021-07-13','2021-07-14','2021-07-15','2021-07-16','2021-07-17','2021-07-18']) #modify these dates ('yyyy-mm-dd')
@@ -60,6 +60,7 @@ query={
 response = requests.get('https://api.twitch.tv/helix/chat/emotes',headers=headers,params=query).json() #request to get channel emotes via Twitch API 
 for emote in response['data']:
 	channel_emotes_dict[emote['name']]=0
+	
 message_dict={}
 
 for index,row in df.iterrows():
