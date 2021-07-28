@@ -1,13 +1,19 @@
 import os
 import requests
 import pandas as pd
-
+import datetime
 import Twitch_data as ttv
 
-streamer = ttv.twitch_channel('fl0m') #channel name here
+streamer = ttv.twitch_channel('nessa') #channel name here
 print(streamer.name)
 print(streamer.id)
-streamer.get_vod_by_datelist(['2021-07-19','2021-07-20','2021-07-21','2021-07-22','2021-07-23','2021-07-24','2021-07-25']) #modify these dates ('yyyy-mm-dd')
+
+#two options either range of dates or a list
+date_list = pd.date_range(start="2021-05-28",end="2021-07-28") #range of dates
+# date_list = ['2021-07-26','2021-07-27','2021-07-28']  #individual date list
+print(date_list)
+
+streamer.get_vod_by_datelist(date_list) #modify these dates ('yyyy-mm-dd')
 print("IDs of requested vods :"+",".join(streamer.vod_id_list)) 
 streamer.get_vod_logs()
 
@@ -70,7 +76,7 @@ for index,row in df.iterrows():
 		message_dict[message]=1
 	else:
 		message_dict[message]+=1
-	message=message.split()
+	message=message.split(' ')
 	for word in message:
 		if word in bttv_dict.keys():
 			bttv_dict[word]+=1
