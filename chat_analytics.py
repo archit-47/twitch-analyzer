@@ -4,17 +4,17 @@ import pandas as pd
 import datetime
 import Twitch_data as ttv
 
-streamer = ttv.twitch_channel('nessa') #channel name here
+streamer = ttv.twitch_channel('fl0m') #channel name here
 print(streamer.name)
 print(streamer.id)
 
 #two options either range of dates or a list
-date_list = pd.date_range(start="2021-05-28",end="2021-07-28") #range of dates
+date_list = pd.date_range(start="2021-07-26",end="2021-08-01") #range of dates
 # date_list = ['2021-07-26','2021-07-27','2021-07-28']  #individual date list
 print(date_list)
 
 streamer.get_vod_by_datelist(date_list) #modify these dates ('yyyy-mm-dd')
-print("IDs of requested vods :"+",".join(streamer.vod_id_list)) 
+print("IDs of requested VODs :"+",".join(streamer.vod_id_list)) 
 streamer.get_vod_logs()
 
 logs_list=[]
