@@ -9,11 +9,12 @@ print(streamer.name)
 print(streamer.id)
 
 #two options either range of dates or a list
-date_list = pd.date_range(start="2021-08-16",end="2021-08-22") #range of dates
+date_list = pd.date_range(start="2021-08-23",end="2021-08-29") #range of dates
 # date_list = ['2021-07-26','2021-07-27','2021-07-28']  #individual date list
 print(date_list)
 
 streamer.get_vod_by_datelist(date_list) #modify these dates ('yyyy-mm-dd')
+streamer.vod_id_list.reverse()
 print("IDs of requested VODs :"+",".join(streamer.vod_id_list)) 
 streamer.get_vod_logs()
 
@@ -38,8 +39,13 @@ for log in streamer.vod_id_list:
 	f_modified.close()
 	logs_list.append(pd.read_csv(os.getcwd()+"\\formatted_logs\\"+log+".txt",sep='\t',names=['Timestamp','Username','Message'],dtype={'Timestamp':str,'Username':str,'Message':str},encoding='utf-8',keep_default_na=False))
 
+# Filter bot messages
 df=pd.concat(logs_list, axis=0, ignore_index=True)
-freq=df.groupby('Username').Username.count()
+df2=df.loc[df.Username!='Techno']
+df3=df2.loc[df.Username!='Nightbot']
+df4=df3.loc[df.Username!='Moobot'] 
+
+freq=df4.groupby('Username').Username.count()
 print("Most active users in the given time period!")
 print(freq.sort_values(ascending=False)[0:20])
 
@@ -68,9 +74,14 @@ for emote in response['data']:
 	channel_emotes_dict[emote['name']]=0
 	
 message_dict={}
+BotMessages=0
 
 for index,row in df.iterrows():
 	message=row['Message']
+	user=row['Username']
+	if user in ['Nightbot','Moobot','HLBot','Techno']:
+		BotMessages+=1
+		continue
 	message=message.strip()
 	if message not in message_dict:
 		message_dict[message]=1
@@ -89,6 +100,7 @@ print("\nStats on chat messages:")
 print("\nTotal Messages : "+str(df.shape[0]))
 print("\nUnique Messages : "+str(len(message_dict)))
 print("\nDuplicate Messages : "+str(df.shape[0]-len(message_dict)))
+print("\nBot Messages : "+str(BotMessages))
 
 print("\nBTTV Emote stats:")
 bttv_list=sorted(bttv_dict,key=bttv_dict.__getitem__)
