@@ -9,7 +9,7 @@ print(streamer.name)
 print(streamer.id)
 
 #two options either range of dates or a list
-date_list = pd.date_range(start="2021-08-23",end="2021-08-29") #range of dates
+date_list = pd.date_range(start="2021-08-30",end="2021-09-06") #range of dates
 # date_list = ['2021-07-26','2021-07-27','2021-07-28']  #individual date list
 print(date_list)
 
@@ -95,6 +95,7 @@ for index,row in df.iterrows():
 			ffz_dict[word]+=1
 		elif word in channel_emotes_dict.keys():
 			channel_emotes_dict[word]+=1
+
 
 print("\nStats on chat messages:")
 print("\nTotal Messages : "+str(df.shape[0]))
