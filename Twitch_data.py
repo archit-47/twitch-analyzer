@@ -64,7 +64,11 @@ class twitch_channel:
 				try:
 					time=datetime.datetime.strptime(self.voddict_by_id[vod_id]['duration'],"%Hh%Mm%Ss")
 				except:
-					time=datetime.datetime.strptime(self.voddict_by_id[vod_id]['duration'],"%Mm%Ss")
+					try:
+						time=datetime.datetime.strptime(self.voddict_by_id[vod_id]['duration'],"%Mm%Ss")
+					except:
+						time=datetime.datetime.strptime(self.voddict_by_id[vod_id]['duration'],"%Ss")
+
 				vod_duration=datetime.timedelta(hours=time.hour,minutes=time.minute,seconds=time.second,microseconds=time.microsecond)
 				self.voddict_by_date[day]['duration'].append(vod_duration)
 				self.voddict_by_date[day]['total_duration']+=vod_duration
