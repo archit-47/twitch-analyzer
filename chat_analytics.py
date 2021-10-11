@@ -9,7 +9,7 @@ print(streamer.name)
 print(streamer.id)
 
 #two options either range of dates or a list
-date_list = pd.date_range(start="2021-09-27",end="2021-10-04") #range of dates
+date_list = pd.date_range(start="2021-10-04",end="2021-10-11") #range of dates
 # date_list = ['2021-07-26','2021-07-27','2021-07-28']  #individual date list
 print(date_list)
 
@@ -75,6 +75,7 @@ for emote in response['data']:
 	
 message_dict={}
 BotMessages=0
+copypasta={}
 
 for index,row in df.iterrows():
 	message=row['Message']
@@ -87,6 +88,11 @@ for index,row in df.iterrows():
 		message_dict[message]=1
 	else:
 		message_dict[message]+=1
+	if len(message.split(' '))>2:
+		if message in copypasta.keys():
+			copypasta[message]+=1
+		else:
+			copypasta[message]=1
 	message=message.split(' ')
 	for word in message:
 		if word in bttv_dict.keys():
@@ -117,3 +123,7 @@ print("\nChannel Emote stats:")
 channel_emotes_list=sorted(channel_emotes_dict,key=channel_emotes_dict.__getitem__)
 for x in channel_emotes_list:
     print(x+"\t"+str(channel_emotes_dict[x])) 
+
+copy_pasta_list=sorted(copypasta,key=copypasta.__getitem__)
+for x in copy_pasta_list[-10:-1]:
+	print(x+ " : " + str(copypasta[x]))
