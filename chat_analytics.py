@@ -61,6 +61,11 @@ ffz_keys=list(ffz_emotes['sets'].keys())
 for emote in ffz_emotes['sets'][ffz_keys[0]]['emoticons']:
     ffz_dict[emote['name']]=0
 
+emotes_7tv=requests.get('https://emotes.adamcy.pl/v1/channel/'+str(streamer.id)+'/emotes/7tv').json() #request to get bttv emotes via API endpoint
+dict_7tv = {}
+for x in emotes_7tv:
+    dict_7tv[x['code']]=0
+
 channel_emotes_dict={}
 headers={
    	'Client-ID': streamer.user.client_id,
@@ -101,6 +106,8 @@ for index,row in df.iterrows():
 			ffz_dict[word]+=1
 		elif word in channel_emotes_dict.keys():
 			channel_emotes_dict[word]+=1
+		elif word in dict_7tv.keys():
+			dict_7tv[word]+=1
 
 
 print("\nStats on chat messages:")
@@ -119,11 +126,16 @@ ffz_list=sorted(ffz_dict,key=ffz_dict.__getitem__)
 for x in ffz_list:
     print(x+"\t"+str(ffz_dict[x]))
 
+print("\n7TV Emote stats:")
+list_7tv=sorted(dict_7tv,key=dict_7tv.__getitem__)
+for x in list_7tv:
+    print(x+"\t"+str(dict_7tv[x]))
+
 print("\nChannel Emote stats:")
 channel_emotes_list=sorted(channel_emotes_dict,key=channel_emotes_dict.__getitem__)
 for x in channel_emotes_list:
     print(x+"\t"+str(channel_emotes_dict[x])) 
 
 copy_pasta_list=sorted(copypasta,key=copypasta.__getitem__)
-for x in copy_pasta_list[-10:-1]:
+for x in copy_pasta_list[-11:-1]:
 	print(x+ " : " + str(copypasta[x]))
