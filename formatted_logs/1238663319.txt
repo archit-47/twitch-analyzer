@@ -5293,13 +5293,12 @@
 3:25:27	LucidR9	but tenz DID play csgo
 3:25:28	LucidR9	KEKWait
 3:25:28	Maetthy	5Gifted
-<<<<<<< HEAD
+<<<<<	EA	
 3:25:33	slimrick6	@nikollaaa but tenz did play Csgo
 3:25:33	1KERY	lvl2 scam train
-=======
 3:25:33	1KERY	lvl2 scam train
 3:25:33	slimrick6	@nikollaaa but tenz did play Csgo
->>>>>>> baecd52ddeffdf978d89507a967dd718f537ca00
+>>>>>	aecd52ddeffdf978d89507a967dd718f537ca0	
 3:25:38	F1unkGG	Sadge no pepoG
 3:25:39	1KERY	POGGERS
 3:25:42	im_always_infamous	NFT this dick pic
@@ -5536,11 +5535,10 @@
 3:37:34	mk_48	these guys hit the Pistol FFA way too hard
 3:37:36	BeauxGnar	14 is all they get LETSGO 14 is all they get LETSGO 14 is all they get LETSGO 14 is all they get LETSGO
 3:37:37	MANIKcc	@slimrick6 WutFace how
-<<<<<<< HEAD
+<<<<<	EA	
 3:37:38	itsarcherman	!res
-=======
 3:37:38	archer_luo	!res
->>>>>>> baecd52ddeffdf978d89507a967dd718f537ca00
+>>>>>	aecd52ddeffdf978d89507a967dd718f537ca0	
 3:37:38	Nightbot	2560×1440 16:9
 3:37:42	Nightbot	Follow the link to join fl0m's discord and come hang out with his ever growing community https://discord.gg/fl0m | Make sure to link your twitch to discord if you're a sub!
 3:37:42	im_always_infamous	ptr wants a longer game
@@ -5593,11 +5591,10 @@
 3:39:24	Nightbot	No, you said it!!! fl0m is 97% virgin baby!!!!!!
 3:39:25	pear_sounds	KEKPOINT
 3:39:26	rusty_p	NotLikeThis
-<<<<<<< HEAD
+<<<<<	EA	
 3:39:28	itsarcherman	KEKW
-=======
 3:39:28	archer_luo	KEKW
->>>>>>> baecd52ddeffdf978d89507a967dd718f537ca00
+>>>>>	aecd52ddeffdf978d89507a967dd718f537ca0	
 3:39:29	SU_RRaven	flom throwing
 3:39:29	mk_48	FEEDING KEKPOINT
 3:39:30	MANIKcc	SHRUGGERS broh?
@@ -5628,11 +5625,10 @@
 3:40:34	LowRatedHighlander	%? They choke this?
 3:40:34	Nightbot	Joris says 19%
 3:40:36	royield	COME BACK
-<<<<<<< HEAD
+<<<<<	EA	
 3:40:36	itsarcherman	!crosshair
-=======
 3:40:36	archer_luo	!crosshair
->>>>>>> baecd52ddeffdf978d89507a967dd718f537ca00
+>>>>>	aecd52ddeffdf978d89507a967dd718f537ca0	
 3:40:37	Nightbot	This video breaks down all of fl0m's in-game settings: https://youtu.be/_-T7DudLqLY?t=426 (it's timestamped) (changed to gap -2 ; fixedgap -4 respectively)
 3:40:37	palindrome_cs	LUL
 3:40:40	LowRatedHighlander	Dammit joris come on
