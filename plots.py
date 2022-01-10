@@ -9,7 +9,7 @@ import Twitch_data as ttv
 streamer = ttv.twitch_channel('fl0m'); #channel name here
 print(streamer.name)
 print(streamer.id)
-date_list = pd.date_range(start="2021-12-27",end="2022-01-03") #range of dates
+date_list = pd.date_range(start="2022-01-03",end="2022-01-10") #range of dates
 # date_list = ['2021-07-26','2021-07-27','2021-07-28']  #individual date list
 print(date_list)
 streamer.get_vod_by_datelist(date_list) #modify these dates ('yyyy-mm-dd')
