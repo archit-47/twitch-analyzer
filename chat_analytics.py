@@ -9,7 +9,7 @@ print(streamer.name)
 print(streamer.id)
 
 #two options either range of dates or a list
-date_list = pd.date_range(start="2022-02-14",end="2022-02-21") #range of dates
+date_list = pd.date_range(start="2022-02-21",end="2022-02-28") #range of dates
 # date_list = ['2021-07-26','2021-07-27','2021-07-28']  #individual date list
 print(date_list)
 
